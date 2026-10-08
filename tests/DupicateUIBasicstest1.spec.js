@@ -134,13 +134,13 @@ console.log(emailText)
 
      // await page.pause()
    await userName.fill(domain)
-   await page.pause()
+   // await page.pause()
    console.log (await userName.inputValue())
 
 })
    
 
-test.only('Visual testing capture', async({page}) => {
+test.skip('Visual testing capture', async({page}) => {
 
 //    await page.goto('https://rahulshettyacademy.com')
 //    expect(await page.screenshot()).toMatchSnapshot('Rahulshetty.png')

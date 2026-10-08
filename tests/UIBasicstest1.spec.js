@@ -13,6 +13,6 @@ test('Page initiation', async ({page}) => {
 
     await page.goto('https://www.Rahulshettyacademy.com');
     console.log(await page.title());
-    await expect(page).toHaveTitle(/RahulShettyAcademy/);
+    await expect(page).toHaveTitle("Rahul Shetty Academy | QA Automation, Playwright, AI Testing & Online Training");
     
 });

@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test')
 
-test('Selecting the item from the ecommerce app', async ({ page }) => {
+test('@e2eTests Selecting the item from the ecommerce app', async ({ page }) => {
 
     const userName = page.locator('#userEmail')
     const password = page.locator('#userPassword')

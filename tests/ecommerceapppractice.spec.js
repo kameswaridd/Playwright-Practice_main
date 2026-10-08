@@ -92,7 +92,7 @@ test('Ecommerce app practice ', async ({ page }) => {
     }
   }
   console.log("View button has been clicked");
-  await page.pause();
+  // await page.pause();
   //const orderDetail = await page.locator(".col-text").textContent(); 
   // const orderDetail = await page.locator('div.col-text.-main').textContent();
   //const orderDetail = await page.locator(".col-text").first().textContent();

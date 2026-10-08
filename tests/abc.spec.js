@@ -30,10 +30,10 @@ await page.locator('#mousehover').hover()
 await page.locator("a[href*='top']").click()
 
 //switching to an iframe
-await page.pause(2000)
+// await page.pause(2000)
 const framePage = page.frameLocator("#courses-iframe")
 await framePage.locator("li a[href*='lifetime-access']:visible").click()
-await page.pause(2000)
+// await page.pause(2000)
 
 //spliting the text and getting the required text from it
 

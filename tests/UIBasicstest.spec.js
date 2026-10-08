@@ -31,7 +31,7 @@ console.log(await page.locator('.card-body a').last().textContent());
 console.log(await page.locator('.card-body a').allTextContents());
 });
 
-test.only ('Static select dropdown practice', async ({browser }) => {
+test('Static select dropdown practice', async ({browser }) => {
     const context = await browser.newContext();
     const page = await context.newPage();
 
@@ -52,7 +52,7 @@ test.only ('Static select dropdown practice', async ({browser }) => {
     //assertions
     await expect(radioButton).toBeChecked();
     console.log(await radioButton.isChecked());
-    await page.locator('[name="terms"]').check();
+    await page.locator('[name="terms"]').click();
     await expect(page.locator('[name="terms"]')).toBeChecked();
     console.log(await page.locator('[name="terms"]').isChecked());
     await page.locator('[name="terms"]').uncheck();
@@ -79,5 +79,5 @@ test.only ('Static select dropdown practice', async ({browser }) => {
     console.log(await userName.inputValue());
    
 
-   await page.pause();
+  // await page.pause();
 });

@@ -4,18 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test tests/WebAPITesting.spec.js --headed"
+    "regression": "npx playwright test",
+    "webTests": "npx playwright test --grep @web --headed",
+    "APITests": "npx playwright test --grep @API",
+    "e2eTests": "npx playwright test --grep @e2e",
+    "SafariNewConfig": "npx playwright test --config playwright.config1.js --project=safari"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@azure/identity": "^4.13.3",
+    "@azure/playwright": "^1.1.6",
     "@playwright/test": "^1.62.1",
     "@types/node": "^26.1.2",
+    "allure-playwright": "^3.13.0",
     "dotenv": "^17.4.2"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^13.2.1",
     "exceljs": "^4.4.0"
   }
 }

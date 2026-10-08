@@ -11,7 +11,7 @@ test('Identifying items on Dashboard Page', async ({ page }) => {
     // await page.locator('[formcontrolname="userEmail"]').fill(email);
     // await page.locator('[formcontrolname="userPassword"]').fill(pwd);
     await page.locator('[formcontrolname="userEmail"]').fill("kameswaridd@gmail.com");
-    await page.locator('[formcontrolname="userPassword"]').fill("Playwright123");
+    await page.locator('[formcontrolname="userPassword"]').fill("Password123");
     await page.locator('[name="login"]').click();
   //await page.waitForLoadState('networkidle');
     await page.locator('.card-body b').first().waitFor();

@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test')
-
+const { APIUtils } = require('../utils/APIUtils');
 let webContext;
 
 test.beforeAll(async ({ browser }) => {
@@ -122,7 +122,7 @@ test('Selecting the item from the ecommerce app', async () => {
     console.log(await page.locator('.email-title').textContent())
 })
 
-test('Second test', async () => {
+test('@API Second test', async () => {
 
     const page = await webContext.newPage()
     await page.goto('https://rahulshettyacademy.com/client/');

@@ -1,5 +1,5 @@
 const {test, expect, request} = require('@playwright/test');
-const { APIUtils } = require('./utils/APIUtils');
+const { APIUtils } = require('../utils/APIUtils');
 
 const loginPayLoad = {userEmail: "kameswaridd@gmail.com", userPassword: "Password123"}
 const orderPayLoad ={orders: [{country: "Bosnia and Herzegowina", productOrderedId: "6960ea76c941646b7a8b3dd5"}]}
@@ -16,7 +16,7 @@ response = await apiUtils.createOrder(orderPayLoad)
 
 })
 
-test('API login setup', async ({ page }) => {
+test('@API API login setup', async ({ page }) => {
 
   await page.addInitScript((token) => {
   window.localStorage.setItem('token', token);
@@ -40,7 +40,7 @@ await page.goto('https://rahulshettyacademy.com/client/');
             break
         }
     }
-    await page.pause()
+  
     await expect(page.locator('.email-title').first()).toBeVisible()
     console.log(await page.locator('.email-title').first().textContent())
  

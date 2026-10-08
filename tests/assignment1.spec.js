@@ -21,9 +21,9 @@ test('First assignment', async ({ page }) => {
     await page.getByRole('textbox', { name: 'Event Date & Time*' }).fill('2026-09-23T01:30');
     await page.getByRole('spinbutton', { name: 'Price ($)*' }).fill('100');
   await page.getByRole('spinbutton', { name: 'Total Seats*' }).fill('50');
-  await page.locator('add-event-btn').click();
+  await page.locator("[type='submit']").click();
 
-    await page.pause(2000)
+    // await page.pause(2000)
 
 
 
