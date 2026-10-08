@@ -39,5 +39,6 @@ await framePage.locator("li a[href*='lifetime-access']:visible").click()
 
 const happySubscribers = await framePage.locator("div[class='text'] h2").textContent()
 console.log(happySubscribers.split(" ")[1])
+//Adding this comment to push it to GitHub and check if the GitHub action is working fine or not
 
 })
